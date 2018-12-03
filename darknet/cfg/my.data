@@ -1,0 +1,6 @@
+classes= 3
+train  = /home/ubuntu/598/trainval.txt
+valid  = /home/ubuntu/598/test.txt
+names = data/my.names
+backup = backup
+
