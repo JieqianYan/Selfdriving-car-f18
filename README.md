@@ -13,7 +13,7 @@
 12. run "wget https://pjreddie.com/media/files/darknet53.conv.74"
 13. run "./darknet detector train cfg/my.data cfg/yolov3-my.cfg darknet53.conv.74"
 14. You will see the weight in ./backup/ after every 100 iteration
-15. run "./darkent detector valid cfg/my.data cfg/yolov3-my.cfg ./backup/yolov3-my_xxxx.weights > result.txt"
+15. run "./darkent detector valid cfg/my.data cfg/yolov3-mytest.cfg ./backup/yolov3-my_xxxx.weights > result.txt"
 16. You will see the prediction result for the test data
 17. Change the format according and can be submited
   
