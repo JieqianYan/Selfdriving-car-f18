@@ -472,19 +472,29 @@ void validate_detector(char *datacfg, char *cfgfile, char *weightfile, char *out
 	int iter;
 	int class_id = -1;
 	float prob = 0;
+	float my_x = 0;
+	float my_y = 0;
+	float my_w = 0;
+	float my_h = 0;
             for (iter = 0; iter < nboxes; ++iter) {
                 char buff[1024];
                 for (int jter = 0; jter < l.classes; ++jter) {
                     if (dets[iter].prob[jter] > prob) {
                         prob = dets[iter].prob[jter];
                         class_id = jter;
+			my_x = dets[iter].bbox.x;
+			my_y = dets[iter].bbox.y;
+			my_w = dets[iter].bbox.w;
+			my_h = dets[iter].bbox.h;
                     }
                 }
             }
 		if(class_id >= 0) {
+		//	printf("%s,%d,%f,%f,%f,%f\n", path, class_id, my_x, my_y, my_w, my_h);
 			printf("%s,%d\n", path, class_id);
 		}
 		else {
+		//	printf("%s,%d,%f,%f,%f,%f\n", path, 1, my_x, my_y, my_w, my_h);
 			printf("%s,%d\n", path, 1);
 		}
             free_detections(dets, nboxes);
