@@ -18,7 +18,7 @@ TASK1:
 15. run "./darkent detector valid cfg/my.data cfg/yolov3-mytest.cfg ./backup/yolov3-my_xxxx.weights > result.txt"
 16. You will see the prediction result for the test data
 17. Change the format according and can be submited
-
+(18. if you want to change the resolution for training, also should run python gen_anchor.py to generate the anchor and replace it in the .cfg)
 
 TASK2:
 
