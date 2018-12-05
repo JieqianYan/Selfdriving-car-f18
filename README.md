@@ -1,4 +1,5 @@
 TASK1:
+
 0. Git to get our repo
 1. Change the darknet folder's name into darknet_my
 2. Download deploy.zip in the folder
@@ -17,7 +18,10 @@ TASK1:
 15. run "./darkent detector valid cfg/my.data cfg/yolov3-mytest.cfg ./backup/yolov3-my_xxxx.weights > result.txt"
 16. You will see the prediction result for the test data
 17. Change the format according and can be submited
+
+
 TASK2:
+
 0. uncommand line 493, line 497 in detector.c under example, and command line 494, line 498 in detector.c
 1. cd darknet
 2. make
